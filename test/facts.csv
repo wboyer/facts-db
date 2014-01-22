@@ -1,0 +1,120 @@
+Git,is a,Tool
+GitHub,is a,Service
+BitBucket,is a,Service
+SourceTree,is a,Tool
+MacPorts,is a,Tool
+CAML,is a,Language
+Dart,is a,Language
+Google,invented,SDCH
+SDCH,is a,Protocol
+webrick,is a,Tool
+lighttpd,is a,Tool
+Apache,is a,Tool
+phpMyAdmin,is a,Tool
+Cloudera,is a,Service
+New Relic,is a,Service
+Prudence,is a,Web App Framework
+Symfony,is a,Web App Framework
+Symfony,uses,PHP
+RDF,is a,Document Format
+Heroku,is a,Service
+Heroku,offers,Infrastructure Hosting
+Fabric,is a,Tool
+Boto,is a,Tool
+Chef,is a,Tool
+PHP,is a,Programming Language
+Java,is a,Programming Language
+James Gosling,invented,Java
+Sun Microsystems,invented,Java
+Sun Microsystems,is a,Company
+Oracle,acquired,Sun Microsystems
+Oracle,is a,Company
+Oracle,offers,Java
+James Gosling,is a,Person
+Ruby,is a,Programming Language
+CloudFlare,is a,Service
+Maven,is a,Build Tool
+Homebrew,is a,Package Manager
+Homebrew,runs on,OSX
+Grunt,is a,Build Tool
+Server Density,is a,Service
+Server Density,offers,Infrastructure Monitoring
+OpenTSDB,is a,Monitoring Tool
+Scalr,is a,Service
+Scalr,offers,Cloud Management
+Flurry,is a,Service
+Apache,invented,Maven
+First Growth Venture Network,is a,Startup Accelerator
+TimeSpace,is a,Startup Accelerator
+New York Times Company,is a,Company
+New York Times Company,offers,TimeSpace
+TechStars,is a,Startup Accelerator
+MarkLogic,is a,Database Server
+Turtle,is a,Document Format
+Vizify,is a,Site Builder
+Mashery,is a,Service
+Apigee,is a,Service
+Apigee,offers,API Platform
+Mashery,offers,API Platform
+Palm,is a,Company
+HP,is a,Company
+HP,acquired,Palm
+Palm,invented,webOS
+LG,acquired,_123
+_123,from seller,HP
+_123,the product,webOS
+Asana,is a,Service
+Asana,offers,Project Management
+Google,offers,GA
+GA,is a,Analytics Service
+JNI,is a,API
+JNI,is based on,Java
+JNI,is for,Executing Native Code from Java
+Ian Rogers,is a,Person
+Ian Rogers,works at,Beats Electronics
+Beats Electronics,is a,Company
+Upstart,is a,Tool
+Upstart,runs on,Ubuntu
+Upstart,is described as,A tool for starting and stopping services  A replacement for the traditional System V init(8)
+Nokogiri,is a,Tool
+Nokogiri,is described as,An HTML parser
+Nokogiri,is based on,Ruby
+Mustache,is a,Tool
+Mustache,is described as,A templating tool
+Stripe,is a,Service
+Stripe,is described as,A payment processor
+Bundoo,uses,Stripe
+Bundoo,is a,Service
+Bundoo,uses,php-fpm
+php-fpm,is a,Tool
+jQuery,is a,Tool
+Modernizr,is a,Tool
+Parsley.js,is a,Tool
+Bundoo,uses,Parsley.js
+Bundoo,uses,jQuery
+Bundoo,uses,Modernizr
+Parsley.js,is described as,A JS library for form validation
+jQuery,is described as,A JS framework for all kinds of DOM manipulation
+Scalr,is a,Service
+Scalr,is described as,A cloud management service.
+W3 Total Cache,is a,Tool
+W3 Total Cache,is described as,A Wordpress plugin that does caching and minification
+APC,is a,Tool
+APC,is described as,A bytecode-caching add-on for PHP
+APC,uses,PHP
+Composer,is described as,A package manager for PHP
+Composer,is a,Tool
+Composer,uses,PHP
+Mandrill,is a,Service
+Mandrill,is described as,A service for sending and processing transactional emails
+Axure,is a,Tool
+Axure,is described as,A web-based wireframing tool.
+Oh,is a,Tool
+Oh,is described as,A Wordpress theme with responsive-design capability
+Harvest,is a,Service
+Harvest,is described as,A web-based time-tracking service
+BrowserStack,is a,Service
+BrowserStack,is described as,A cross-browser testing service
+W3 Total Cache,was written by,Fredrick Townes
+Couchbase,is a,Database Server
+PhoneGap,is a,Tool

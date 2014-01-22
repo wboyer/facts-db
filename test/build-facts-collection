@@ -1,0 +1,16 @@
+#!/bin/bash
+
+mongo <<EOF
+db.facts.remove();
+db.facts.ensureIndex( { "subj": 1, "pred": 1, "obj": 1 }, { "unique": true } );
+db.summary.remove();
+EOF
+
+cat facts.csv | sed \
+-e 's/^/db.facts.save( { "subj": "/' \
+-e 's/,/"~ "pred": "/1' \
+-e 's/,/", "obj": "/' \
+-e 's/~/,/' \
+-e 's/$/" } )/' | mongo
+
+mongo ./build-summary-collection.js
