@@ -3,14 +3,15 @@
 mongo <<EOF
 db.facts.remove();
 db.facts.ensureIndex( { "subj": 1, "pred": 1, "obj": 1 }, { "unique": true } );
-db.summary.remove();
+db.facts_summary.remove();
 EOF
 
-cat facts.csv | sed \
+dos2unix -l < facts.csv | sed \
 -e 's/^/db.facts.save( { "subj": "/' \
 -e 's/,/"~ "pred": "/1' \
 -e 's/,/", "obj": "/' \
 -e 's/~/,/' \
--e 's/$/" } )/' | mongo
+-e 's/$/" } )/' | \
+tr -d '\r' | mongo
 
-mongo ./build-summary-collection.js
+mongo ../src/db/build-summary-collection.js
