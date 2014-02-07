@@ -104,23 +104,24 @@ function summarizeTuples(tuples, start, givenNodes, nodes)
 {
 	var node = nodes[0];
 	var map = [];
+	var value;
 
 	for (var i in tuples) {
 		var tuple = tuples[i].tuple;
-		var nodeValue = tuple[node];
+		value = tuple[node];
 
-		if (nodeValue) {
-			var mapEntry = map[nodeValue];
-			if (!mapEntry) {
-				mapEntry = {};
-				mapEntry.value = nodeValue;
-				mapEntry.tuples = [];
-				map[nodeValue] = mapEntry;
+		if (value) {
+			var entry = map[value];
+			if (!entry) {
+				entry = {};
+				entry.value = value;
+				entry.tuples = [];
+				map[value] = entry;
 			}
 			if (Object.keys(tuple).length === (givenNodes.length + 1))
-				mapEntry.count = tuples[i].count;
+				entry.count = tuples[i].count;
 			else
-				mapEntry.tuples.push(tuples[i]);
+				entry.tuples.push(tuples[i]);
 		}
 	}
 
@@ -154,7 +155,7 @@ function summarizeTuples(tuples, start, givenNodes, nodes)
 	nodes = nodes.slice(1);
 
 	for (key in values) {
-		var value = {};
+		value = {};
 		value.value = values[key].value;
 
 		if (nodes.length)
