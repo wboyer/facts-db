@@ -140,30 +140,31 @@ function summarizeTuples(tuples, start, givenNodes, nodes)
 	if (start)
 		values = values.slice(start);
 
-	var result = {};
-	var nodeResult = { values: [], meta: {}}; 
-	result[node] = nodeResult;
+	var result = { values: [], meta: {}}; 
 
 	if (values.length > 10) {
-		nodeResult.meta.more = values.length - 10;
+		result.meta.more = values.length - 10;
 		values = values.slice(0, 10);
 	}
 	else
-		nodeResult.meta.more = 0;
+		result.meta.more = 0;
 
 	givenNodes.push(node);
 	nodes = nodes.slice(1);
 
 	for (key in values) {
 		value = {};
-		value.value = values[key].value;
+		value.label = values[key].value;
 
 		if (nodes.length)
 			value.children = summarizeTuples(values[key].tuples, 0, givenNodes, nodes);
-		nodeResult.values.push(value);
+		result.values.push(value);
 	}
 
-	return result;
+	var wrappedResult = {};
+	wrappedResult[node] = result;
+
+	return wrappedResult;
 }
 
 function searchByPrefix(node, q, start, res, func)
@@ -219,7 +220,7 @@ exports.browse = function(req, res)
 
 		for (var i in results[node].values) {
 			var otherNodeValue = {};
-			otherNodeValue.value = results[node].values[i].value;
+			otherNodeValue.label = results[node].values[i].label;
 			results[otherNode].values.push(otherNodeValue);
 		}
 
@@ -232,7 +233,7 @@ exports.browse = function(req, res)
 
 			var value = results[node].values[i];
 
-			searchByValue(node, value.value, 0, res, function(tuples) {
+			searchByValue(node, value.label, 0, res, function(tuples) {
 				value.children = summarizeTuples(tuples, 0, [], nodes);
 				runQueryInSeries(node, ++i, nodes, final);
 			});
