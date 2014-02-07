@@ -100,11 +100,73 @@ exports.delete = function(req, res)
 	});
 };
 
-exports.search = function(req, res)
+function summarizeTuples(tuples, start, givenNodes, nodes)
 {
-	var node = req.params.node;
-	var q = req.query.q;
-	var start = req.query.start;
+	var node = nodes[0];
+	var map = [];
+
+	for (var i in tuples) {
+		var tuple = tuples[i].tuple;
+		var nodeValue = tuple[node];
+
+		if (nodeValue) {
+			var mapEntry = map[nodeValue];
+			if (!mapEntry) {
+				mapEntry = {};
+				mapEntry.value = nodeValue;
+				mapEntry.tuples = [];
+				map[nodeValue] = mapEntry;
+			}
+			if (Object.keys(tuple).length === (givenNodes.length + 1))
+				mapEntry.count = tuples[i].count;
+			else
+				mapEntry.tuples.push(tuples[i]);
+		}
+	}
+
+	var values = [];
+	for (var key in map)
+		values.push(map[key]);
+
+	values.sort(function(a, b) {
+		if (a.count < b.count)
+			return 1;
+		if (a.count > b.count)
+			return -1;
+		return 0;
+	});
+
+	if (start)
+		values = values.slice(start);
+
+	var result = {};
+	var nodeResult = { values: [], meta: {}}; 
+	result[node] = nodeResult;
+
+	if (values.length > 10) {
+		nodeResult.meta.more = values.length - 10;
+		values = values.slice(0, 10);
+	}
+	else
+		nodeResult.meta.more = 0;
+
+	givenNodes.push(node);
+	nodes = nodes.slice(1);
+
+	for (key in values) {
+		var value = {};
+		value.value = values[key].value;
+
+		if (nodes.length)
+			value.children = summarizeTuples(values[key].tuples, 0, givenNodes, nodes);
+		nodeResult.values.push(value);
+	}
+
+	return result;
+}
+
+function searchByPrefix(node, q, start, res, func)
+{
 	db.collection('facts_summary', function(err, collection) {
 		var query = JSON.parse('{"_id": { "' + node + '-pfx": "' + q + '"}}');
 		collection.findOne(query, function(err, doc) {
@@ -113,29 +175,72 @@ exports.search = function(req, res)
 				res.statusCode = 503;
 				res.send({'error': 'An error has occurred'});
 			}
-			else {
-				var results = [];
+			else
+				func(summarizeTuples(doc ? doc.value.tuples : [], start, [], [node]));
+		});
+	});
+}
 
-				if (doc) {
-					var tuples = doc.value.tuples;
-
-					tuples.sort(function(a, b) {
-						if (a.count < b.count)
-								return 1;
-						if (a.count > b.count)
-								return -1;
-						return 0;
-					});
-
-					if (start)
-							tuples = tuples.slice(start);
-
-					for (var tuple in tuples)
-						results.push(tuples[tuple].tuple);
-				}
-
-				res.send(results);
+exports.search = function(req, res)
+{
+	searchByPrefix(req.params.node, req.query.q, req.query.start, res, function(results) {
+		res.send(results);
+	});
+};
+ 
+function searchByValue(node, q, start, res, func)
+{
+	db.collection('facts_summary', function(err, collection) {
+		var query = JSON.parse('{"_id": { "' + node + '": "' + q + '"}}');
+		collection.findOne(query, function(err, doc) {
+			if (err) {
+				console.error(err);
+				res.statusCode = 503;
+				res.send({'error': 'An error has occurred'});
 			}
+			else
+				func(doc ? doc.value.tuples : []);
+		});
+	});
+}
+
+exports.browse = function(req, res)
+{
+	var node = 'subj';
+	if (req.params.node === 'obj')
+		node = 'obj';
+
+	var otherNode = (node === 'subj') ? 'obj' : 'subj';
+
+	searchByPrefix(node, req.query.q, req.query.start, res, function(results) {
+		results[otherNode] = {};
+		results[otherNode].values = [];
+
+		for (var i in results[node].values) {
+			var otherNodeValue = {};
+			otherNodeValue.value = results[node].values[i].value;
+			results[otherNode].values.push(otherNodeValue);
+		}
+
+		function runQueryInSeries(node, i, nodes, final) {
+			if (i == results[node].values.length) {
+				if (final)
+					final();
+				return;
+			}
+
+			var value = results[node].values[i];
+
+			searchByValue(node, value.value, 0, res, function(tuples) {
+				value.children = summarizeTuples(tuples, 0, [], nodes);
+				runQueryInSeries(node, ++i, nodes, final);
+			});
+		}
+
+		runQueryInSeries(node, 0, ['pred', otherNode]);
+
+		runQueryInSeries(otherNode, 0, ['pred', node], function() {
+			res.send(results);
 		});
 	});
 };
@@ -148,6 +253,6 @@ exports.addRoutes = function(app)
 	app.put('/facts/:id', exports.update);
 	app.delete('/facts/:id', exports.delete);
 	app.get('/facts/search/:node', exports.search);
+	app.get('/facts/browse/:node', exports.browse);
 };
-
 

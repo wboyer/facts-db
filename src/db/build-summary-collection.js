@@ -44,8 +44,8 @@ db.runCommand(
 				for (s in substrings)
 					for ( var i = 1; (i < 10) && (i <= substrings[s].length); i++ ) {
 						var key = JSON.parse('{"' + name + '-pfx" : "' + substrings[s].substring(0, i).toLowerCase() + '"}');
-						emit( key,
-									{ "tuples": [ { "tuple": { name: str }, "count": 1 } ] } );
+						var value = JSON.parse('{"tuples": [{"tuple": {"' + name + '": "' + str + '"}, "count": 1}]}');
+						emit( key, value);
 					}
 			}
 
