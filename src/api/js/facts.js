@@ -171,10 +171,17 @@ function summarizeTuples(tuples, start, givenNodes, nodes)
 		value = {};
 		value.label = values[key].value;
 
-		if (nodes.length)
-			value.children = summarizeTuples(values[key].tuples, 0, givenNodes, nodes);
+		if (nodes.length) {
+			var children = summarizeTuples(values[key].tuples, 0, givenNodes, nodes);
+			if (children)
+				value.children = children;
+		}
+
 		result.values.push(value);
 	}
+
+	if (!result.values.length)
+		return null;
 
 	var wrappedResult = {};
 	wrappedResult[node] = result;
@@ -203,7 +210,7 @@ exports.search = function(req, res)
 	addCorsHeaders(res);
 
 	searchByPrefix(req.params.node, req.query.q, req.query.start, res, function(results) {
-		res.send(results);
+			res.send(results ? results : {});
 	});
 };
  
@@ -234,6 +241,11 @@ exports.browse = function(req, res)
 	var otherNode = (node === 'subj') ? 'obj' : 'subj';
 
 	searchByPrefix(node, req.query.q, req.query.start, res, function(results) {
+		if (!results) {
+			res.send({});
+			return;
+		}
+
 		results[otherNode] = {};
 		results[otherNode].values = [];
 
@@ -253,7 +265,9 @@ exports.browse = function(req, res)
 			var value = results[node].values[i];
 
 			searchByValue(node, value.label, 0, res, function(tuples) {
-				value.children = summarizeTuples(tuples, 0, [], nodes);
+				var children = summarizeTuples(tuples, 0, [], nodes);
+				if (children)
+					value.children = children;
 				runQueryInSeries(node, ++i, nodes, final);
 			});
 		}
