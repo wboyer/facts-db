@@ -239,10 +239,10 @@ exports.browse = function(req, res)
 			});
 		}
 
-		runQueryInSeries(node, 0, ['pred', otherNode]);
-
-		runQueryInSeries(otherNode, 0, ['pred', node], function() {
-			res.send(results);
+		runQueryInSeries(node, 0, ['pred', otherNode], function() {
+			runQueryInSeries(otherNode, 0, ['pred', node], function() {
+				res.send(results);
+			});
 		});
 	});
 };
