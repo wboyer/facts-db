@@ -1,1 +1,220 @@
-_123,from seller,HP_123,the product,webOSApache,is a,ToolApache,invented,MavenAPC,is a,ToolAPC,is described as,A bytecode-caching add-on for PHPAPC,uses,PHPApigee,is a,ServiceApigee,offers,API PlatformAsana,is a,ServiceAsana,offers,Project ManagementAxure,is a,ToolAxure,is described as,A web-based wireframing toolBeats Electronics,is a,CompanyBitBucket,is a,ServiceBoto,is a,ToolBrowserStack,is a,ServiceBrowserStack,is described as,A cross-browser testing serviceBundoo,uses,StripeBundoo,is a,ServiceBundoo,uses,php-fpmBundoo,uses,Parsley.jsBundoo,uses,jQueryBundoo,uses,ModernizrCAML,is a,Programming LanguageChef,is a,ToolCloudera,is a,ServiceCloudFlare,is a,Servicepip,is described as,A package manager for Pythonpip,is a,ToolComposer,is described as,A package manager for PHPComposer,is a,ToolComposer,uses,PHPCouchbase,is a,Database ServerDart,is a,Programming LanguageDart,works with,JavaScriptDart,is described as,A language that compiles to JavaScriptFabric,is a,ToolFirst Growth Venture Network,is a,Startup AcceleratorFlurry,is a,ServiceGA,is a,Analytics ServiceGit,is a,ToolGitHub,is a,ServiceGoogle,invented,SDCHGoogle,offers,Google AnalyticsGrunt,is a,Build ToolHarvest,is a,ServiceHarvest,is described as,A web-based time-tracking serviceHeroku,is a,ServiceHeroku,offers,Infrastructure HostingHomebrew,is a,Package ManagerHomebrew,runs on,OSXHP,is a,CompanyHP,acquired,PalmIan Rogers,is a,PersonIan Rogers,works at,Beats ElectronicsJames Gosling,invented,JavaJames Gosling,is a,PersonJava,is a,Programming LanguageJNI,is a,APIJNI,is based on,JavaJNI,is for,Executing Native Code from JavajQuery,is a,TooljQuery,is described as,A JS framework for all kinds of DOM manipulationLG,acquired,_123lighttpd,is a,ToolMacPorts,is a,ToolMandrill,is a,ServiceMandrill,is described as,A service for sending and processing transactional emailsMarkLogic,is a,Database ServerMashery,is a,ServiceMashery,offers,API PlatformMaven,is a,Build ToolModernizr,is a,ToolMustache,is a,ToolMustache,is described as,A templating toolNew Relic,is a,ServiceNew York Times Company,is a,CompanyNew York Times Company,offers,TimeSpaceNokogiri,is a,ToolNokogiri,is described as,An HTML parserNokogiri,is based on,RubyOh,is a,ToolOh,is described as,A Wordpress theme with responsive-design capabilityOpenTSDB,is a,Monitoring ToolOracle,acquired,Sun MicrosystemsOracle,is a,CompanyOracle,offers,JavaPalm,is a,CompanyPalm,invented,webOSParsley.js,is a,ToolParsley.js,is described as,A JS library for form validationPhoneGap,is a,ToolPHP,is a,Programming Languagephp-fpm,is a,ToolphpMyAdmin,is a,ToolPrudence,is a,Web App FrameworkRDF (Resource Description Format),is a,Document FormatRuby,is a,Programming LanguageScalr,is a,ServiceScalr,offers,Cloud ManagementScalr,is described as,A cloud management serviceSDCH,is a,ProtocolServer Density,is a,ServiceServer Density,offers,Infrastructure MonitoringSourceTree,is a,ToolStripe,is a,ServiceStripe,is described as,A payment processorSun Microsystems,invented,JavaSun Microsystems,is a,CompanySymfony,is a,Web App FrameworkSymfony,uses,PHPTechStars,is a,Startup AcceleratorTimeSpace,is a,Startup AcceleratorTurtle,is a,Document FormatUpstart,is a,ToolUpstart,runs on,UbuntuUpstart,is described as,"A tool for starting and stopping services, replacing the traditional System V init(8)"Vizify,is a,Site BuilderW3 Total Cache,is a,Wordpress PluginW3 Total Cache,is described as,A Wordpress plugin that does caching and minificationW3 Total Cache,was written by,Fredrick Towneswebrick,is a,ToolNPM,is a,Package ManagerNPM,works with,Node.jsNode.js,is a,ServerExpress,is a,Web App FrameworkExpress,uses,JavaScriptExpress,works with,Node.jsApiary,is a,ServiceApiary,is described as,"A service for API development, documentation, and testing"Pingdom,is a,Monitoring ServiceJavaScript,is a,Programming LanguageHAL (HyperText Application Language),,Curie (Compact URI),,Bob Bowman,works at,MLB Advanced MediaMLB Advanced Media,is a,CompanyGhost,is a,CMS (Content Management System)HAML (HTML Abstraction Markup Language),is a,Markup LanguageSASS,is a,Stylesheet LanguageSmarty,is a,Templating SystemSmarty,works with,PHPmustache.js,is a,JavaScript LibraryJSONLint,is a,ServiceHandleBars,is a,Templating SystemDFP (DoubleClick For Publishers),is a,Ad ServiceGoogle,offers,DFP (DoubleClick For Publishers)Friendly iFrames,is a,SpecificationTimThumb,is a,LibraryTimThumb,is written in,PHPTimThumb,is described as,An image-processing libraryEmber.js,,Shapeways,is a,ServiceShapeways,is described as,A marketplace for 3D-printed productsCQ5,is a,CMS (Content Management System)Adobe,is a,CompanyAdobe,offers,CQ5Rails,works with,RubyRails,is a,Web App FrameworkXSRF (Cross-Site Request Forgery),is a,Security Threatfreenode,is a,Chat ServiceAngular.js,is a,JavaScript FrameworkGo,is a,Programming LanguageGoogle,invented,GoGoogle,invented,DartGo,is useful for,ConcurrencyErlang,is a,Programming LanguageErlang,is useful for,ConcurrencyEricsson,is a,CompanyEricsson,invented,ErlangYaws,is a,Web ServerYaws,is written in,ErlangClass Constructor Pattern,is a,Software Design PatternClosure Compiler,is a,ToolGoogle,offers,Closure Compiler
+_1,from seller,HP
+_1,the product,webOS
+Apache,is a,Tool
+Apache,invented,Maven
+APC,is a,Tool
+APC,is described as,A bytecode-caching add-on for PHP
+APC,uses,PHP
+Apigee,is a,Service
+Apigee,offers,API Platform
+Asana,is a,Service
+Dustin Moskovitz,founded,Asana
+Asana,offers,Project Management
+ProWorkflow,is a,Service
+ProWorkflow,offers,Project Management
+Wrike,is a,Service
+Wrike,offers,Project Management
+Axure,is a,Tool
+Axure,is described as,A web-based wireframing tool
+Beats Electronics,is a,Company
+BitBucket,is a,Service
+Boto,is a,Tool
+BrowserStack,is a,Service
+BrowserStack,is described as,A cross-browser testing service
+Bundoo,uses,Stripe
+Bundoo,is a,Service
+Bundoo,uses,php-fpm
+Bundoo,uses,Parsley.js
+Bundoo,uses,jQuery
+Bundoo,uses,Modernizr
+CAML,is a,Programming Language
+Chef,is a,Tool
+Cloudera,is a,Service
+CloudFlare,is a,Service
+pip,is described as,A package manager for Python
+pip,is a,Tool
+Composer,is described as,A package manager for PHP
+Composer,is a,Tool
+Composer,uses,PHP
+Couchbase,is a,Database Server
+Dart,is a,Programming Language
+Dart,works with,JavaScript
+Dart,is described as,A language that compiles to JavaScript
+Fabric,is a,Tool
+First Growth Venture Network,is a,Startup Accelerator
+Flurry,is a,Service
+GA,is a,Analytics Service
+Git,is a,Tool
+GitHub,is a,Service
+Google,invented,SDCH
+Google,offers,Google Analytics
+Grunt,is described as,"A task-runner tool, useful for automated builds, etc."
+Grunt,is a,Tool
+Harvest,is a,Service
+Harvest,is described as,A web-based time-tracking service
+Heroku,is a,Service
+Heroku,offers,Infrastructure Hosting
+Homebrew,is a,Package Manager
+Homebrew,runs on,OSX
+HP,is a,Company
+HP,acquired,Palm
+Ian Rogers,is a,Person
+Ian Rogers,works at,Beats Electronics
+James Gosling,invented,Java
+James Gosling,is a,Person
+Java,is a,Programming Language
+JNI,is a,API
+JNI,is based on,Java
+JNI,is for,Executing Native Code from Java
+jQuery,is a,Tool
+jQuery,is described as,A JS framework for all kinds of DOM manipulation
+LG,acquired,_1
+lighttpd,is a,Tool
+MacPorts,is a,Tool
+Mandrill,is a,Service
+Mandrill,is described as,A service for sending and processing transactional emails
+MarkLogic,is a,Database Server
+Mashery,is a,Service
+Mashery,offers,API Platform
+Maven,is a,Build Tool
+Modernizr,is a,Library
+Modernizr,is described as,A JS library for for device-capabilities detection and media-query evaluation
+Mustache,is a,Tool
+Mustache,is described as,A templating tool
+New Relic,is a,Service
+New York Times Company,is a,Company
+New York Times Company,offers,TimeSpace
+Nokogiri,is a,Tool
+Nokogiri,is described as,An HTML parser
+Nokogiri,is based on,Ruby
+Oh,is a,Tool
+Oh,is described as,A Wordpress theme with responsive-design capability
+OpenTSDB,is a,Monitoring Tool
+Oracle,acquired,Sun Microsystems
+Oracle,is a,Company
+Oracle,offers,Java
+Palm,is a,Company
+Palm,invented,webOS
+Parsley.js,is a,Tool
+Parsley.js,is described as,A JS library for form validation
+PhoneGap,is a,Tool
+PHP,is a,Programming Language
+php-fpm,is a,Tool
+phpMyAdmin,is a,Tool
+Prudence,is a,Web App Framework
+RDF (Resource Description Format),is a,Document Format
+Ruby,is a,Programming Language
+Scalr,is a,Service
+Scalr,offers,Cloud Management
+Scalr,is described as,A cloud management service
+SDCH,is a,Protocol
+Server Density,is a,Service
+Server Density,offers,Infrastructure Monitoring
+SourceTree,is a,Tool
+Stripe,is a,Service
+Stripe,is described as,A payment processor
+Sun Microsystems,invented,Java
+Sun Microsystems,is a,Company
+Symfony,is a,Web App Framework
+Symfony,uses,PHP
+TechStars,is a,Startup Accelerator
+TimeSpace,is a,Startup Accelerator
+Turtle,is a,Document Format
+Upstart,is a,Tool
+Upstart,runs on,Ubuntu
+Upstart,is described as,"A tool for starting and stopping services, replacing the traditional System V init(8)"
+Vizify,is a,Site Builder
+W3 Total Cache,is a,Wordpress Plugin
+W3 Total Cache,is described as,A Wordpress plugin that does caching and minification
+W3 Total Cache,was written by,Fredrick Townes
+webrick,is a,Tool
+NPM,is a,Package Manager
+NPM,works with,Node.js
+Node.js,is a,Server
+Express,is a,Web App Framework
+Express,uses,JavaScript
+Express,works with,Node.js
+Apiary,is a,Service
+Apiary,is described as,"A service for API development, documentation, and testing"
+Pingdom,is a,Monitoring Service
+JavaScript,is a,Programming Language
+HAL (HyperText Application Language),is a,Markup Language
+Curie (Compact URI),is a,Specification
+Bob Bowman,works at,MLB Advanced Media
+MLB Advanced Media,is a,Company
+Ghost,is a,CMS (Content Management System)
+HAML (HTML Abstraction Markup Language),is a,Markup Language
+SASS,is a,Stylesheet Language
+Smarty,is a,Templating System
+Smarty,works with,PHP
+mustache.js,is a,JavaScript Library
+JSONLint,is a,Service
+HandleBars,is a,Templating System
+DFP (DoubleClick For Publishers),is a,Ad Service
+Google,offers,DFP (DoubleClick For Publishers)
+Friendly iFrames,is a,Jargon
+Friendly iFrames,means,iFrames hosted on same domain as containing page
+TimThumb,is a,Library
+TimThumb,is written in,PHP
+TimThumb,is described as,An image-processing library
+Ember.js,is a,JavaScript Library
+Shapeways,is a,Service
+Shapeways,is described as,A marketplace for 3D-printed products
+CQ5,is a,CMS (Content Management System)
+Adobe,is a,Company
+Adobe,offers,CQ5
+Rails,works with,Ruby
+Rails,is a,Web App Framework
+XSRF (Cross-Site Request Forgery),is a,Security Threat
+freenode,is a,Chat Service
+Angular.js,is a,JavaScript Framework
+Go,is a,Programming Language
+Google,invented,Go
+Google,invented,Dart
+Go,is useful for,Concurrency
+Erlang,is a,Programming Language
+Erlang,is useful for,Concurrency
+Ericsson,is a,Company
+Ericsson,invented,Erlang
+Yaws,is a,Web Server
+Yaws,is written in,Erlang
+Class Constructor Pattern,is a,Software Design Pattern
+Closure Compiler,is a,Tool
+Google,offers,Closure Compiler
+Bill Boyer,is a,Person
+Bill Boyer,has a skill,_2
+_2,2,1
+_2,applies to,DFP (DoubleClick For Publishers)
+Vox Media,is a,Company
+Vox Media,offers,The Verge
+The Verge,is a,Tech News Site
+DFA (DoubleClick for Advertisers),is a,Service
+DCM (DoubleClick Campaign Manager),is a,Service
+Adobe,offers,Captivate
+Graphite,is a,Tool
+Graphite,is described as,A system for recording and graphing time-series data
+CSS Regions,is a,Feature
+Adobe,invented,CSS Regions
+JSFiddle,is a,Service
+JSFiddle,is described as,A web-based service for testing JavaScript and HTML/CSS code snippets
+Jack Dorsey,founded,Twitter
+Jack Dorsey,founded,Square
+Square,is a,Service
+Twitter,is a,Service
+Envato,is a,Company
+Envato,offers,Tuts+ Premium
+Tuts+ Premium,is a,Service
+Tuts+ Premium,is described as,A web-based learning service
+Envato,offers,Code Canyon
+Code Canyon,is a,Service
+Code Canyon,is described as,An e-commerce site for code
+GTD (Getting Things Done),is a,Practice
+Inside Sales,is a,Practice
+Venmo,is a,Service
+Venmo,is described as,A mobile payments service
+Amplify,is a,Company
+Amplify,is described as,A company offering digital learning and assessment tools
+Joel Klein,works at,Amplify
+News Corp,owns,Amplify
+News Corp,is a,Company
+Rupert Murdock,works at,News Corp
