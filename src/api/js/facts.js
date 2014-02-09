@@ -19,8 +19,15 @@ db.open(function(err, db)
 	}
 });
 
+function addCorsHeaders (res)
+{
+	res.header('Access-Control-Allow-Origin', '*');
+}
+
 exports.findById = function(req, res)
 {
+	addCorsHeaders(res);
+
 	var id = req.params.id;
 	db.collection('facts', function(err, collection) {
 		collection.findOne({'_id':new BSON.ObjectID(id)}, function(err, doc) {
@@ -39,6 +46,8 @@ exports.findById = function(req, res)
  
 exports.findAll = function(req, res)
 {
+	addCorsHeaders(res);
+
 	db.collection('facts', function(err, collection) {
 		collection.find().toArray(function(err, docs) {
 			if (err) {
@@ -54,6 +63,8 @@ exports.findAll = function(req, res)
  
 exports.add = function(req, res)
 {
+	addCorsHeaders(res);
+
 	var facts = req.body;
 	db.collection('facts', function(err, collection) {
 		collection.insert(facts, {safe:true}, function(err, result) {
@@ -69,6 +80,8 @@ exports.add = function(req, res)
  
 exports.update = function(req, res)
 {
+	addCorsHeaders(res);
+
 	var id = req.params.id;
 	var fact = req.body;
 	db.collection('facts', function(err, collection) {
@@ -87,6 +100,8 @@ exports.update = function(req, res)
  
 exports.delete = function(req, res)
 {
+	addCorsHeaders(res);
+
 	var id = req.params.id;
 	db.collection('facts', function(err, collection) {
 		collection.remove({'_id':new BSON.ObjectID(id)}, {safe:true}, function(err, result) {
@@ -185,6 +200,8 @@ function searchByPrefix(node, q, start, res, func)
 
 exports.search = function(req, res)
 {
+	addCorsHeaders(res);
+
 	searchByPrefix(req.params.node, req.query.q, req.query.start, res, function(results) {
 		res.send(results);
 	});
@@ -208,6 +225,8 @@ function searchByValue(node, q, start, res, func)
 
 exports.browse = function(req, res)
 {
+	addCorsHeaders(res);
+
 	var node = 'subj';
 	if (req.params.node === 'obj')
 		node = 'obj';
