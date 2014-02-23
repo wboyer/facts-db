@@ -6,12 +6,14 @@ db.facts.ensureIndex( { "subj": 1, "pred": 1, "obj": 1 }, { "unique": true } );
 db.facts_summary.remove();
 EOF
 
-dos2unix < facts.csv | sed \
+dos2unix -l < facts.csv | \
+tr -d '\r' | sed \
 -e 's/^/db.facts.save( { "subj": "/' \
 -e 's/,/"~ "pred": "/1' \
 -e 's/,/", "obj": "/' \
--e 's/~/,/' \
--e 's/$/" } )/' | \
-tr -d '\r' | mongo
+-e 's/~/,/g' \
+-e 's/$/" } )/' \
+-e 's/""/"/g' | \
+mongo
 
 mongo ../src/db/build-summary-collection.js
