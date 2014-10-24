@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "private": true,
   "files": ["./src/api"],
-  "main": "./src/api/js/facts"
+  "main": "./src/api/js/facts",
   "dependencies": {
     "express": "*",
     "mongodb": "*"
